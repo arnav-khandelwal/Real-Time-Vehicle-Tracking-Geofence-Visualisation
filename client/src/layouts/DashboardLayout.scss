@@ -1,0 +1,28 @@
+@use '../styles/variables' as *;
+
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 260px 1fr 300px;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  border-top: 2px solid $color-panel-border;
+  box-shadow: inset 0 0 0 1px $color-panel-border;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-right: 1px solid $color-panel-border;
+
+  &__body {
+    flex: 1;
+    overflow-y: auto;
+  }
+}
+
+.panel--left   { background-color: $color-panel-left; }
+.panel--center { background-color: $color-panel-center; }
+.panel--right  { background-color: $color-panel-right; }

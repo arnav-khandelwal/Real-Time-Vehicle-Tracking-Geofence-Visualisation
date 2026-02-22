@@ -1,11 +1,8 @@
-import './App.scss'
+import './App.scss';
+import DashboardLayout from './layouts/DashboardLayout';
 
 function App() {
-  return (
-    <>
-      <h1>Hello World</h1>
-    </>
-  )
+  return <DashboardLayout />;
 }
 
-export default App
+export default App;

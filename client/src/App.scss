@@ -1,8 +1,20 @@
 @use './styles/variables' as *;
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  background-color: $color-page-bg;
+  color: $color-panel-text;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
