@@ -1,0 +1,62 @@
+@use 'variables' as *;
+
+:root {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-text;
+
+  color: $color-text;
+  background-color: $color-white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: $font-weight-accent;
+  color: $color-primary;
+  text-decoration: inherit;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-primary;
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid $color-grey-light;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: $font-weight-accent;
+  font-family: $font-family-base;
+  background-color: $color-secondary;
+  color: $color-white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+
+  &:hover {
+    border-color: $color-primary;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
