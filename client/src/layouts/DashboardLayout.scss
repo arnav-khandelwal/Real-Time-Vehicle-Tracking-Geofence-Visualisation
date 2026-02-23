@@ -19,8 +19,12 @@
 
   &__body {
     flex: 1;
-    overflow: hidden;
-    position: relative;
+    overflow-y: auto;
+
+    &--map {
+      overflow: hidden;
+      position: relative;
+    }
   }
 }
 
