@@ -1,4 +1,5 @@
 import './DashboardLayout.scss';
+import MapView from '../components/map/MapView';
 
 function DashboardLayout() {
   return (
@@ -9,7 +10,9 @@ function DashboardLayout() {
       </div>
 
       <div className="panel panel--center">
-        <div className="panel__body" />
+        <div className="panel__body">
+          <MapView />
+        </div>
       </div>
 
       <div className="panel panel--right">
