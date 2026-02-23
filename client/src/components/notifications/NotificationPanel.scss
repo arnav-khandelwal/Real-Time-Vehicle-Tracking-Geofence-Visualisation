@@ -1,0 +1,91 @@
+@use '../../styles/variables' as *;
+
+.notification-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__header {
+    padding: 14px 16px;
+    background-color: $color-panel-header;
+    color: $color-white;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-primary;
+    font-size: 12px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    flex: 1;
+  }
+}
+
+// ─── Individual notification item ────────────────────────────────────────────
+
+.notification-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border-bottom: 1px solid $color-panel-border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__badge {
+    flex-shrink: 0;
+    font-size: 9px;
+    font-weight: $font-weight-primary;
+    letter-spacing: 0.8px;
+    padding: 3px 6px;
+    border-radius: 4px;
+    margin-top: 2px;
+    color: $color-white;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: $font-weight-primary;
+    color: $color-panel-text;
+    margin: 0;
+  }
+
+  &__message {
+    font-size: 11px;
+    color: #5a5a5a;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  &__time {
+    font-size: 10px;
+    color: #999;
+    margin: 0;
+    margin-top: 2px;
+  }
+}
+
+// ─── Badge colours per type ───────────────────────────────────────────────────
+
+.notification-item--geofence-exit  .notification-item__badge { background-color: $color-red; }
+.notification-item--geofence-entry .notification-item__badge { background-color: $color-primary; }
+.notification-item--speeding       .notification-item__badge { background-color: $color-yellow; color: $color-black; }
+
+// ─── Left border accent per type ─────────────────────────────────────────────
+
+.notification-item--geofence-exit  { border-left: 3px solid $color-red; }
+.notification-item--geofence-entry { border-left: 3px solid $color-primary; }
+.notification-item--speeding       { border-left: 3px solid $color-yellow; }

@@ -1,12 +1,15 @@
 import './DashboardLayout.scss';
 import MapView from '../components/map/MapView';
+import NotificationPanel from '../components/notifications/NotificationPanel';
 
 function DashboardLayout() {
   return (
     <div className="dashboard">
 
       <div className="panel panel--left">
-        <div className="panel__body" />
+        <div className="panel__body">
+          <NotificationPanel />
+        </div>
       </div>
 
       <div className="panel panel--center">
